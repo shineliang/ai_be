@@ -1,8 +1,0 @@
-dev/langchain4j/example/aiservice/StreamingAssistant.class
-dev/langchain4j/example/aiservice/AssistantConfiguration.class
-dev/langchain4j/example/aiservice/AssistantController.class
-dev/langchain4j/example/ExampleApplication.class
-dev/langchain4j/example/aiservice/AssistantConfiguration$1.class
-dev/langchain4j/example/lowlevel/ChatLanguageModelController.class
-dev/langchain4j/example/aiservice/AssistantTools.class
-dev/langchain4j/example/aiservice/Assistant.class
