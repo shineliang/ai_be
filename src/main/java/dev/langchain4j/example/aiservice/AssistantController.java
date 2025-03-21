@@ -2,6 +2,7 @@ package dev.langchain4j.example.aiservice;
 
 import dev.langchain4j.service.spring.AiService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -29,6 +30,12 @@ class AssistantController {
 
     @GetMapping(value = "/streamingAssistant", produces = TEXT_EVENT_STREAM_VALUE)
     public Flux<String> streamingAssistant(
+            @RequestParam(value = "message", defaultValue = "Tell me an interesting story in 100 words") String message) {
+        return streamingAssistant.chat(message);
+    }
+
+    @PostMapping(value = "/streamingAssistant", produces = TEXT_EVENT_STREAM_VALUE)
+    public Flux<String> streamingAssistant1(
             @RequestParam(value = "message", defaultValue = "Tell me an interesting story in 100 words") String message) {
         return streamingAssistant.chat(message);
     }
